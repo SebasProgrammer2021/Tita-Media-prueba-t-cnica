@@ -8,6 +8,6 @@ const initialState = {
 
 export const userInfo = createReducer(initialState, {
   [setUserInfo]: (state, action) => {
-    state = action.payload;
+    state.userinfo = action.payload;
   },
 });
