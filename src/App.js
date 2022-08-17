@@ -4,16 +4,16 @@ import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import jwt_decode from "jwt-decode";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+const queryClient = new QueryClient();
 
 function App() {
   const [userInfo, setUserInfo] = useState();
 
   const handleLogin = (response) => {
-    console.log(response.credential, "id token, credentials");
     let userObject = jwt_decode(response.credential);
     setUserInfo(userObject);
   };
-  console.log(userInfo);
 
   useEffect(() => {
     google.accounts.id.initialize({
@@ -28,7 +28,11 @@ function App() {
   }, []);
 
   return (
-    <div className="App">{userInfo ? <Home user={userInfo} /> : <Login />}</div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        {userInfo ? <Home user={userInfo} /> : <Login />}
+      </div>
+    </QueryClientProvider>
   );
 }
 

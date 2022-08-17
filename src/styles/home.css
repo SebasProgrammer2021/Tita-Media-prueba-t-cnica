@@ -1,0 +1,8 @@
+#headerUserInfo {
+  display: flex;
+}
+
+#headerUserInfo img {
+  border-radius: 30px;
+  margin-right: 1rem;
+}
