@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import useGetPostsList from "../../api/services/getPostsList";
+import CommentsList from "../commentsList/CommentsList";
+import ReusableModal from "../common/reusableModal/ReusableModal";
 
-const PostsTable = ({ data }) => {
+const PostsList = () => {
+  const { data } = useGetPostsList();
+  const [postId, setPostId] = useState();
+  const [open, setOpen] = useState(false);
+
+  const handleShowComments = (id) => {
+    setPostId(id);
+    setOpen(true);
+  };
+
   return (
     <div className="postsContainerStyles">
-      {data?.map((post, key) => (
+      {data?.data?.map((post, key) => (
         <div className="postStyles" key={key}>
           <img className="postImage" src={post.image} alt="" />
           <div className="postUserInfo">
@@ -21,7 +33,13 @@ const PostsTable = ({ data }) => {
               />
               <span>{post.likes}</span>
             </div>
-            <div>
+            <div
+              className="postCommentsBtn"
+              role={"button"}
+              onClick={() => {
+                handleShowComments(post.id);
+              }}
+            >
               <img
                 src="https://img.icons8.com/fluency-systems-regular/48/000000/comments--v1.png"
                 alt="comments"
@@ -32,8 +50,14 @@ const PostsTable = ({ data }) => {
           <p id="postText">{post.text}</p>
         </div>
       ))}
+      <ReusableModal open={open} setOpen={setOpen}>
+        <CommentsList postId={postId} />
+      </ReusableModal>
+      <ReusableModal open={open} setOpen={setOpen}>
+        <CommentsList postId={postId} />
+      </ReusableModal>
     </div>
   );
 };
 
-export default PostsTable;
+export default PostsList;
