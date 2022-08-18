@@ -98,6 +98,7 @@
 
 .postStatistics {
   display: flex;
+  margin-top: 23px;
 }
 
 .postStatistics img {
@@ -115,4 +116,14 @@
 .postStatistics span {
   margin-left: 2px;
   font-weight: 600;
+}
+
+.postCommentsBtn {
+  cursor: pointer;
+}
+
+.customModal {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 27px;
 }
