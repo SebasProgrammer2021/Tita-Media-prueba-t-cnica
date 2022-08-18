@@ -2,15 +2,22 @@ import React, { useState } from "react";
 import useGetPostsList from "../../api/services/getPostsList";
 import CommentsList from "../commentsList/CommentsList";
 import ReusableModal from "../common/reusableModal/ReusableModal";
+import UserInfo from "../userInfo/UserInfo";
 
 const PostsList = () => {
   const { data } = useGetPostsList();
   const [postId, setPostId] = useState();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState("");
+  const [ownerInfo, setOwnerInfo] = useState();
 
   const handleShowComments = (id) => {
     setPostId(id);
-    setOpen(true);
+    setOpen("comments");
+  };
+
+  const handleShowUserInfo = (owner) => {
+    setOpen("user");
+    setOwnerInfo(owner);
   };
 
   return (
@@ -18,7 +25,13 @@ const PostsList = () => {
       {data?.data?.map((post, key) => (
         <div className="postStyles" key={key}>
           <img className="postImage" src={post.image} alt="" />
-          <div className="postUserInfo">
+          <div
+            className="postUserInfo"
+            role={"button"}
+            onClick={() => {
+              handleShowUserInfo(post.owner);
+            }}
+          >
             <img src={post.owner.picture} alt="" />
             <p>
               {post.owner.firstName}&nbsp;{post.owner.lastName}
@@ -50,11 +63,11 @@ const PostsList = () => {
           <p id="postText">{post.text}</p>
         </div>
       ))}
-      <ReusableModal open={open} setOpen={setOpen}>
+      <ReusableModal open={open === "comments"} setOpen={setOpen}>
         <CommentsList postId={postId} />
       </ReusableModal>
-      <ReusableModal open={open} setOpen={setOpen}>
-        <CommentsList postId={postId} />
+      <ReusableModal open={open === "user"} setOpen={setOpen}>
+        <UserInfo data={ownerInfo} />
       </ReusableModal>
     </div>
   );

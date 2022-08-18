@@ -63,7 +63,6 @@
 .postUserInfo {
   border-radius: 20px;
   display: flex;
-  /* justify-content: space-evenly; */
   background-color: white;
   margin-top: -13px;
   position: absolute;
@@ -73,6 +72,7 @@
   -moz-box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.75);
   align-items: center;
+  cursor: pointer;
 }
 
 .postUserInfo img {
@@ -126,4 +126,18 @@
   max-width: 500px;
   width: 100%;
   border-radius: 27px;
+}
+
+.userInfoHeaderContainer {
+  display: flex;
+  align-items: center;
+}
+
+.userInfoHeaderContainer img {
+  margin-right: 1rem;
+  border-radius: 27px;
+}
+
+.userInfoHeaderContainer p{
+  text-transform: capitalize;
 }
