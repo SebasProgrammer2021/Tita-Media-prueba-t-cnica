@@ -18,12 +18,9 @@ jobs:
       - name: install packages
         run: npm install
       - name: registry github user
-      - uses:
-        with:
-          global: true
-          name: "SebasProgrammer2021"
-          email: "sebastian.londonov@uqvirtual.edu.co"
-          token: "${{secrets.PROD_DEPLOY}}"
+        run:
+          git config --global user.name SebasProgrammer2021
+          git config --global user.email sebastian.londonov@uqvirtual.edu.co
       - name: deploy the app
         run: npm run deploy
         env:
