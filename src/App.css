@@ -50,6 +50,7 @@
   border-radius: 20px;
   width: 20%;
   margin-bottom: 20px;
+  padding-bottom: 3rem;
 }
 
 .postImage {
@@ -98,11 +99,9 @@
 
 .postStatistics {
   display: flex;
-  margin-top: 23px;
 }
 
 .postStatistics img {
-  margin-top: 36px;
   width: 45%;
 }
 
@@ -138,6 +137,23 @@
   border-radius: 27px;
 }
 
-.userInfoHeaderContainer p{
+.userInfoHeaderContainer p {
   text-transform: capitalize;
+}
+
+.postTags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.tag {
+  margin-bottom: 1rem;
+  padding: .4rem;
+  background: #11998e;
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+  background: linear-gradient(to right, #38ef7d, #11998e);
+  border-radius: 0.5rem;
 }
