@@ -2,7 +2,7 @@
   "name": "prueba-tecnica-tita-media",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sebas-programmer.github.io/Tita-Media-prueba-t-cnica/",
+  "homepage": "https://SebasProgrammer2021.github.io/Tita-Media-prueba-t-cnica/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
     "@tanstack/react-query": "^4.1.3",

@@ -18,6 +18,7 @@ jobs:
       - name: install packages
         run: npm install
       - name: registry github user
+      - uses:
         with:
           global: true
           name: "SebasProgrammer2021"
