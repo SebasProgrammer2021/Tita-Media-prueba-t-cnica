@@ -2,6 +2,7 @@
   "name": "prueba-tecnica-tita-media",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sebas-programmer.github.io/Tita-Media-prueba-t-cnica/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
     "@tanstack/react-query": "^4.1.3",
@@ -19,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -r https://$PROD_DEPLOY@github.com/SebasProgrammer2021/Tita-Media-prueba-t-cnica"
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
