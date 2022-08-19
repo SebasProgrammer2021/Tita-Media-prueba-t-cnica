@@ -3,8 +3,9 @@ import useGetPostsList from "../../api/services/getPostsList";
 import CommentsList from "../commentsList/CommentsList";
 import ReusableModal from "../common/reusableModal/ReusableModal";
 import UserInfo from "../userInfo/UserInfo";
+import PostListTemplate from "./templates/postListTemplate";
 
-const PostsList = () => {
+const PostsList = ({ postTagData }) => {
   const { data } = useGetPostsList();
   const [postId, setPostId] = useState();
   const [open, setOpen] = useState("");
@@ -22,47 +23,23 @@ const PostsList = () => {
 
   return (
     <div className="postsContainerStyles">
-      {data?.data?.map((post, key) => (
-        <div className="postStyles" key={key}>
-          <img className="postImage" src={post.image} alt="" />
-          <div
-            className="postUserInfo"
-            role={"button"}
-            onClick={() => {
-              handleShowUserInfo(post.owner);
-            }}
-          >
-            <img src={post.owner.picture} alt="" />
-            <p>
-              {post.owner.firstName}&nbsp;{post.owner.lastName}
-            </p>
-          </div>
-          <div className="postStatistics">
-            <div className="postLikes">
-              <img
-                id="likeHeart"
-                src="https://img.icons8.com/fluency/48/000000/like.png"
-                alt="heart like"
-              />
-              <span>{post.likes}</span>
-            </div>
-            <div
-              className="postCommentsBtn"
-              role={"button"}
-              onClick={() => {
-                handleShowComments(post.id);
-              }}
-            >
-              <img
-                src="https://img.icons8.com/fluency-systems-regular/48/000000/comments--v1.png"
-                alt="comments"
-              />
-              <span>{post.likes}</span>
-            </div>
-          </div>
-          <p id="postText">{post.text}</p>
-        </div>
-      ))}
+      {postTagData?.length !== 0 ? (
+        <PostListTemplate
+          data={postTagData}
+          functions={{
+            handleShowComments: handleShowComments,
+            handleShowUserInfo: handleShowUserInfo,
+          }}
+        />
+      ) : (
+        <PostListTemplate
+          data={data?.data}
+          functions={{
+            handleShowComments: handleShowComments,
+            handleShowUserInfo: handleShowUserInfo,
+          }}
+        />
+      )}
       <ReusableModal open={open === "comments"} setOpen={setOpen}>
         <CommentsList postId={postId} />
       </ReusableModal>

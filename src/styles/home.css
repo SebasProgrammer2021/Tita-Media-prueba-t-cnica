@@ -1,8 +1,32 @@
 #headerUserInfo {
   display: flex;
+  margin-bottom: 2rem;
 }
 
 #headerUserInfo img {
   border-radius: 30px;
   margin-right: 1rem;
+}
+
+#headerUserInfo h3 {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+#headerUserInfo p {
+  text-align: start;
+}
+
+form {
+  margin-bottom: 2.3rem;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-right: 0.6rem;
+}
+
+form input {
+  height: 30px;
 }
