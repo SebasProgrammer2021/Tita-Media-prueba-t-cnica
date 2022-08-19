@@ -20,6 +20,7 @@ jobs:
       - name: registry github user
         run:
           git config --global user.name SebasProgrammer2021
+        run:
           git config --global user.email sebastian.londonov@uqvirtual.edu.co
       - name: deploy the app
         run: npm run deploy
