@@ -18,10 +18,10 @@ jobs:
       - name: install packages
         run: npm install
       - name: registry github user
-        run: /
+        run:
           git config --global user.email "sebastian.londonov@uqvirtual.edu.co"
           git config --global user.name "SebasProgrammer2021"
       - name: deploy the app
         run: npm run deploy
         env:
-            PROD_DEPLOY: ${{ secrets.PROD_DEPLOY }}
+          PROD_DEPLOY: ${{ secrets.PROD_DEPLOY }}
