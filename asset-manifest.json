@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Tita-Media-prueba-t-cnica/static/css/main.b6cdf17b.css",
+    "main.js": "/Tita-Media-prueba-t-cnica/static/js/main.d56d0235.js",
+    "static/js/787.2c10b924.chunk.js": "/Tita-Media-prueba-t-cnica/static/js/787.2c10b924.chunk.js",
+    "index.html": "/Tita-Media-prueba-t-cnica/index.html",
+    "main.b6cdf17b.css.map": "/Tita-Media-prueba-t-cnica/static/css/main.b6cdf17b.css.map",
+    "main.d56d0235.js.map": "/Tita-Media-prueba-t-cnica/static/js/main.d56d0235.js.map",
+    "787.2c10b924.chunk.js.map": "/Tita-Media-prueba-t-cnica/static/js/787.2c10b924.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6cdf17b.css",
+    "static/js/main.d56d0235.js"
+  ]
+}
