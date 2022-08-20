@@ -16,12 +16,12 @@ function App() {
   };
 
   useEffect(() => {
-    google.accounts.id.initialize({
+    google?.accounts?.id.initialize({
       client_id:
         "247793283933-ra0909fqf0198n6pg2vr58mvbj0eeot7.apps.googleusercontent.com",
       callback: handleLogin,
     });
-    google.accounts.id.renderButton(document.getElementById("signInButton"), {
+    google?.accounts?.id.renderButton(document.getElementById("signInButton"), {
       theme: "outline",
       size: "large",
     });
