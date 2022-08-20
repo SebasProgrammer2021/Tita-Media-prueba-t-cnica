@@ -1,6 +1,32 @@
-# Getting Started with Create React App
+# Prueba técnica Tita Media para Desarrollador Frontend React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto que cumple los siguientes requisitos:
+
+* Iniciar sesión utilizando un autenticador externo (Google, Facebook, entre otros).
+  Ver posts en el home.
+* Cada post debe mostrar: foto y nombre del usuario que hizo el post, imagen y texto del post, tags del post, cantidad de likes y comentarios.
+* Se debe mostrar un modal con todos los comentarios.
+* Se debe mostrar un modal con toda la información del usuario que hizo el post.
+* Se deben poder filtrar los posts por tag.
+* La información del usuario autenticado debe ser mostrada en el header.
+* Aplicación desplegada, puede ser en netlify, heroku, github pages o el de tu preferencia.
+
+La información proviene de la siguiente api publica [Dummyapi.io](https://dummyapi.io/)
+
+## Despliegue
+
+Esta aplicación fue desplegada en [Github pages](https://pages.github.com/)
+
+Enlace de la aplicación [App](https://sebasprogrammer2021.github.io/Tita-Media-prueba-t-cnica/)
+
+## Tecnologias utilizadas
+
+* React
+* React-Query
+* Github-Pages
+* Hooks
+
+This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -38,35 +64,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Tita-Media-prueba-t-cnica
-# Tita-Media-prueba-t-cnica
